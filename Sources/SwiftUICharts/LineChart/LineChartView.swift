@@ -95,7 +95,7 @@ public struct LineChartView: View {
                     } else {
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
-                        .offset(x: 0, y: 8)
+                        .offset(x: 10, y: 8)
                     }
                 }
             
