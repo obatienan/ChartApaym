@@ -92,7 +92,7 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                       Text("\(self.currentValue)")
+                       Text("\(monthsChartDic[100150.0])" as String)
                          .font(.system(size: 14, weight: .regular, design: .default))
                          .offset(x: 0, y: 8)
                     } else { 
