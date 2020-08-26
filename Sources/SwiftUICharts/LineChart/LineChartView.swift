@@ -90,7 +90,7 @@ public struct LineChartView: View {
                     )
                     if(self.currentValue == 0.0){
                          let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-                         let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: userCards as! Data) as! NSArray
+                         let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
                         Text("\(monthsChartDic["JUL"])")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 0, y: 8)
