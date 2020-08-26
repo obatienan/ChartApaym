@@ -54,7 +54,7 @@ public struct LineChartView: View {
     }
      
         public let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
+        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: self.monthsChart as! Data) as! NSArray
      
     public var body: some View {
         ZStack(alignment: .center){
