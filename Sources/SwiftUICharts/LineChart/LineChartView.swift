@@ -93,7 +93,7 @@ public struct LineChartView: View {
                     )
                     if(self.currentValue == 0.0){
                         if self.monthsChartDic["JUL"] != nil {
-                            Text("\(self.monthsChartDic["JUL"])")
+                            Text("\(self.monthsChartDic["JUL"])" as String)
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .offset(x: 0, y: 8)
                         }
