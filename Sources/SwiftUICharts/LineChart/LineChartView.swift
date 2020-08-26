@@ -53,6 +53,9 @@ public struct LineChartView: View {
         self.valueSpecifier = valueSpecifier!
     }
     
+    let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
+    let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
+    
     public var body: some View {
         ZStack(alignment: .center){
             RoundedRectangle(cornerRadius: 0)
@@ -89,8 +92,6 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                         let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-                         let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
                         Text("\(monthsChartDic["JUL"])")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 0, y: 8)
