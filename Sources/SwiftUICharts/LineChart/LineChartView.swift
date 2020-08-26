@@ -52,10 +52,10 @@ public struct LineChartView: View {
         self.dropShadow = dropShadow!
         self.valueSpecifier = valueSpecifier!
     }
-    
-    let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-    let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
-    
+    struct months {
+        let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
+        let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: monthsChart as! Data) as! NSArray
+    }
     public var body: some View {
         ZStack(alignment: .center){
             RoundedRectangle(cornerRadius: 0)
