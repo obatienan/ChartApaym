@@ -54,7 +54,7 @@ public struct LineChartView: View {
     }
      
         //public let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: "monthsChart") as! Data) as! NSDictionary
+        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: "monthsChart").description as! Data) as! NSDictionary
      
     public var body: some View {
         ZStack(alignment: .center){
@@ -92,7 +92,7 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                        Text("\(self.monthsChartDic["JUL"] as? Double)")
+                        Text("\(self.monthsChartDic["JUL"])")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 0, y: 8)
                     } else { 
