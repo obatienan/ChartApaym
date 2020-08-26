@@ -89,12 +89,12 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                        Text("")
+                        Text("\(user.user["clientNumcel"]!)")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 0, y: 8)
                     } else {
-                      print("----\(user.user["clientNumcel"]!)")   
-                      print("----\(self.currentValue)")  
+                    //  print("----\(user.user["clientNumcel"]!)")   
+                    //  print("----\(self.currentValue)")  
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
