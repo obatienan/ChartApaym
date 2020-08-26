@@ -89,13 +89,16 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                        Text("ok")
+                        Text("")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 0, y: 8)
                     } else {
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
+                      Text("Month")
+                        .font(.system(size: 14, weight: .regular, design: .default))
+                        .offset(x: 10, y: 18)  
                     }
                 }
             
