@@ -94,18 +94,18 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                                
-                    if(self.currentValue == 0.0){
-                       Text("\(self.monthsChartDic.keysForValue(value: 2.0))" as String)
-                         .font(.system(size: 14, weight: .regular, design: .default))
-                         .offset(x: 0, y: 8)
-                    } else { 
+                  //  if(self.currentValue == 0.0){
+                 //      Text("\(self.monthsChartDic.keysForValue(value: 2.0))" as String)
+                 //        .font(.system(size: 14, weight: .regular, design: .default))
+                 //        .offset(x: 0, y: 8)
+                 //   } else { 
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
                       Text("\(self.monthsChartDic.keysForValue(value: OneDecimal(self.currentValue))[0])" as String)
-                        .font(.system(size: 14, weight: .regular, design: .default))
-                        .offset(x: 10, y: 18)  
-                    }
+                        .font(.system(size: 12, weight: .regular, design: .default))
+                        .offset(x: 10, y: 20)  
+                 //   }
                 }
             
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 120, maxHeight: 120, alignment: .topLeading)
