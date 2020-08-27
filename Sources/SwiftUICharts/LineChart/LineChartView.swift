@@ -102,7 +102,7 @@ public struct LineChartView: View {
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
-                      Text("\(self.monthsChartDic.keysForValue(value: (self.currentValue, specifier: "%.1f"))[0])")
+                      Text("\(self.monthsChartDic.keysForValue(value: (self.currentValue, specifier: "%.1f"))[0])" as String)
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 18)  
                     }
