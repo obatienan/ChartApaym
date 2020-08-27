@@ -105,7 +105,8 @@ public struct LineChartView: View {
                         .foregroundColor(Color.gray)
                       Text("\(self.monthsChartDic.keysForValue(value: self.OneDecimal(self.currentValue))[0])" as String)
                         .font(.system(size: 12, weight: .regular, design: .default))
-                        .offset(x: 10, y: 20)  
+                        .offset(x: 10, y: 30) 
+                        .foregroundColor(Color.gray)
                  //   }
                 }
             
