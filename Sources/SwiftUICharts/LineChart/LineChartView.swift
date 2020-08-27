@@ -95,7 +95,7 @@ public struct LineChartView: View {
                     )
                                
                     if(self.currentValue == 0.0){
-                       Text("\(self.monthsChartDic.keysForValue(value: 2.0))")
+                       Text("\(self.monthsChartDic.keysForValue(value: 2.0))" as String)
                          .font(.system(size: 14, weight: .regular, design: .default))
                          .offset(x: 0, y: 8)
                     } else { 
