@@ -55,6 +55,7 @@ public struct LineChartView: View {
      
         //public let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
         public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: "monthsChart") as! Data) as! NSDictionary
+        var dict = ["a": 1.1, "b": 2.0]
      
     public var body: some View {
         ZStack(alignment: .center){
@@ -92,7 +93,7 @@ public struct LineChartView: View {
                         maxDataValue: .constant(nil)
                     )
                     if(self.currentValue == 0.0){
-                       Text("\(monthsChartDic["JUL"])" as String)
+                       Text("\(dict.keysForValue(value: 2.0)[0])")
                          .font(.system(size: 14, weight: .regular, design: .default))
                          .offset(x: 0, y: 8)
                     } else { 
@@ -143,6 +144,21 @@ struct WidgetView_Previews: PreviewProvider {
         Group {
             LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Line chart", legend: "Basic")
                 .environment(\.colorScheme, .light)
+        }
+    }
+}
+
+extension Dictionary where Value: Equatable {
+    /// Returns all keys mapped to the specified value.
+    /// “`
+    /// let dict = ["A": 1, "B": 2, "C": 3]
+    /// let keys = dict.keysForValue(2)
+    /// assert(keys == ["B"])
+    /// assert(dict["B"] == 2)
+    /// “`
+    func keysForValue(value: Value) -> [Key] {
+        return flatMap { (key: Key, val: Value) -> Key? in
+            value == val ? key : nil
         }
     }
 }
