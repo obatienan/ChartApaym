@@ -92,6 +92,7 @@ public struct LineChartView: View {
                         minDataValue: .constant(nil),
                         maxDataValue: .constant(nil)
                     )
+                               
                     if(self.currentValue == 0.0){
                        Text("\(dict.keysForValue(value: 2.0)[0])")
                          .font(.system(size: 14, weight: .regular, design: .default))
@@ -100,7 +101,7 @@ public struct LineChartView: View {
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
-                      Text("Month")
+                      Text("\(self.currentValue, specifier: "%.1f")")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 18)  
                     }
