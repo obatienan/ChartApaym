@@ -100,12 +100,12 @@ public struct LineChartView: View {
                  //        .offset(x: 0, y: 8)
                  //   } else { 
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
-                        .font(.system(size: 14, weight: .regular, design: .default))
+                        .font(.system(size: 12, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
                         .foregroundColor(Color.gray)
                       Text("\(self.monthsChartDic.keysForValue(value: self.OneDecimal(self.currentValue))[0])" as String)
                         .font(.system(size: 12, weight: .regular, design: .default))
-                        .offset(x: 10, y: 30) 
+                        .offset(x: 10, y: 25) 
                         .foregroundColor(Color.gray)
                  //   }
                 }
