@@ -102,7 +102,7 @@ public struct LineChartView: View {
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
-                      Text("\(self.monthsChartDic.keysForValue(value: (self.currentValue, specifier: "%.1f"))[0])" as String)
+                      Text("\(self.monthsChartDic.keysForValue(value: OneDecimal(self.currentValue))[0])" as String)
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 18)  
                     }
@@ -138,6 +138,12 @@ public struct LineChartView: View {
             return CGPoint(x: CGFloat(index)*stepWidth, y: CGFloat(points[index])*stepHeight)
         }
         return .zero
+    }
+    
+    func OneDecimal(_ value: Double) ->  Double{
+        
+        let val = Double(String(format: "%.1f", value))!
+        return val
     }
 }
 
