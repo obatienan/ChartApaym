@@ -54,7 +54,7 @@ public struct LineChartView: View {
     }
      
         //public let monthsChart = UserDefaults.standard.object(forKey: "monthsChart")
-        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: "monthsChart") as! Data) as! Dictionary<String,Any>
+        public let monthsChartDic = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.object(forKey: "monthsChart") as! Data) as! Dictionary<String,Double>
         //public let let monthsChartDic = monthsChartNSDic as Dictionary<String,Any>
         var dict = ["a": 1.1, "b": 2.0]
      
