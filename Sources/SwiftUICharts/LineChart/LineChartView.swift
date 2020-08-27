@@ -95,14 +95,14 @@ public struct LineChartView: View {
                     )
                                
                     if(self.currentValue == 0.0){
-                       Text("\(self.dict.keysForValue(value: 2.0)[0])")
+                       Text("\(self.monthsChartDic.keysForValue(value: 2.0)[0])")
                          .font(.system(size: 14, weight: .regular, design: .default))
                          .offset(x: 0, y: 8)
                     } else { 
                       Text("\(self.currentValue, specifier: self.valueSpecifier) XOF")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 8)
-                      Text("\(self.monthsChartDic.keysForValue(value: (self.currentValue, specifier: "%.1f"))[0])" as String)
+                      Text("")
                         .font(.system(size: 14, weight: .regular, design: .default))
                         .offset(x: 10, y: 18)  
                     }
